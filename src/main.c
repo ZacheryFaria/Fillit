@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 13:43:57 by zfaria            #+#    #+#             */
-/*   Updated: 2018/12/19 14:08:23 by awindham         ###   ########.fr       */
+/*   Updated: 2018/12/20 10:42:06 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,13 @@ int			main(int argc, char **argv)
 	testmap->size = 10;
 	map_print(testmap);
 	map_free(testmap);
+
+	list_iter(tetrominos, &tetris_trim);
+
+	int i = 0;
+	while (tetrominos->data[i])
+		printf("%s\n", tetrominos->data[i++]);
+	
 
 	/*			bullshit			*/
 	#ifdef T_PRINT_PCS
