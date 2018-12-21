@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verify.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
+/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 17:45:38 by zfaria            #+#    #+#             */
-/*   Updated: 2018/12/19 14:09:31 by zfaria           ###   ########.fr       */
+/*   Updated: 2018/12/20 12:18:15 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <ft_fillit.h>
 #include <string.h>
 
-static int	verify_block(char *str)
+int	verify_block(char *str)
 {
 	int hash;
 	int dot;
@@ -58,7 +58,7 @@ static int	verify_adjacent(char **piece, int x, int y)
 	return (valid);
 }
 
-static int	verify_piece(char **piece)
+int	verify_tetromino(char **piece)
 {
 	int x;
 	int y;
@@ -81,19 +81,4 @@ static int	verify_piece(char **piece)
 		x++;
 	}
 	return (valid > 5);
-}
-
-char		**verify_tetrimino(char *str)
-{
-	char **map;
-
-	map = NULL;
-	if (verify_block(str))
-	{
-		map = ft_strsplit(str, '\n');
-		if (verify_piece(map))
-			return (map);
-	}
-	ft_strdel(map);
-	return (NULL);
 }

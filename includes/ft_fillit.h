@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 17:50:40 by zfaria            #+#    #+#             */
-/*   Updated: 2018/12/20 10:37:55 by zfaria           ###   ########.fr       */
+/*   Updated: 2018/12/21 09:50:50 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ enum			e_usage_types
 	Argc,
 	Open,
 	Read,
-	Invalid
+	Invalid_Tetromino
 };
 
 typedef struct	s_t
@@ -36,7 +36,8 @@ typedef struct	s_game_board
 /*
 ** ****** verify ******
 */
-char			**verify_tetrimino(char *str);
+int				verify_tetromino(char **str);
+int				verify_block(char *str);
 
 /*
 ** ****** list ********
