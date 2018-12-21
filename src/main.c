@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 13:43:57 by zfaria            #+#    #+#             */
-/*   Updated: 2018/12/21 09:51:47 by zfaria           ###   ########.fr       */
+/*   Updated: 2018/12/21 09:54:55 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,17 +56,7 @@ int			main(int argc, char **argv)
 		}
 	}
 
-	t_game_board *testmap = map_init(5);
-	testmap->size = 10;
-	map_print(testmap);
-	map_free(testmap);
-
-	list_iter(tetrominos, &tetris_trim);
-
-	int i = 0;
-	while (tetrominos->data[i])
-		printf("%s\n", tetrominos->data[i++]);
-	
+	list_iter(tetrominos, &tetris_trim);	
 
 	/*			bullshit			*/
 	#define T_PRINT_PCS

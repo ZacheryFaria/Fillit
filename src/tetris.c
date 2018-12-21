@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 09:39:14 by zfaria            #+#    #+#             */
-/*   Updated: 2018/12/20 10:39:44 by zfaria           ###   ########.fr       */
+/*   Updated: 2018/12/21 09:55:16 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,4 @@ void			tetris_trim(char **piece)
 			i++;
 	}
 	i = 0;
-	while (piece[i])
-		printf("%s\n", piece[i++]);
-	printf("\n");
 }
